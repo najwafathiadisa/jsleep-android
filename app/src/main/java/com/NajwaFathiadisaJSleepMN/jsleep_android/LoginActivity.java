@@ -20,21 +20,23 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         TextView register = findViewById(R.id.textView3);
-        register.setOnClickListener(new View.OnClickListener() {
+        Button mainActivity = findViewById(R.id.button2);
+        register.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
+            public void onClick (View view){
                 Intent move = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(move);
             }
         });
 
-        Button buttonLogin = findViewById((R.id.button2));
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
+        mainActivity.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
+            public void onClick (View view){
                 Intent move = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(move);
             }
         });
+
     }
+
 }

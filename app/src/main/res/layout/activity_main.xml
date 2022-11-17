@@ -4,19 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/pinkbg">
+
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="155dp"
-        android:layout_height="130dp"
-        android:layout_marginBottom="300dp"
+        android:layout_width="268dp"
+        android:layout_height="124dp"
         android:fontFamily="@font/bungee"
+        android:gravity="center_horizontal"
         android:text="Hello User !"
-        android:textColor="#00106A"
+        android:textColor="#005A8D"
         android:textColorHint="#25A9BA"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="128dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
