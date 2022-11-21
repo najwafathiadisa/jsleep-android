@@ -5,66 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/pinkbg">
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    android:background="@color/pink">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="46dp"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="63dp">
 
         <Button
-            android:id="@+id/prev_button"
+            android:id="@+id/ButPrev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#005A8D"
-            android:fontFamily="@font/bungee"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="PREV" />
+            android:backgroundTint="#005A8D"
+            android:text="PREV"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/next_button"
+            android:id="@+id/ButNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:fontFamily="@font/bungee"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="#005A8D"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="NEXT" />
+            android:backgroundTint="#005A8D"
+            android:text="NEXT"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
-            android:layout_width="wrap_content"
+            android:id="@+id/CountText"
+            android:layout_width="63dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:ems="3"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:ems="10"
+            android:inputType="number"
+            android:text="1"
+            android:textAlignment="center"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/go_button"
+            android:id="@+id/ButGo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#005A8D"
-            android:layout_marginRight="10dp"
-            android:fontFamily="@font/bungee"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="GO" />
-
+            android:backgroundTint="#005A8D"
+            android:text="GO"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/ListMain"
+        android:layout_width="410dp"
+        android:layout_height="564dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="169dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

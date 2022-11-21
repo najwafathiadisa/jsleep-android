@@ -3,13 +3,19 @@ package model;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Room extends Serializable{public int accountId;
-    public String name;
+public class Room extends Serializable {
+    public int accountId;
     public int size;
-    public Price price;
-    public Facility facility;
+    public String name;
+    public ArrayList<Date> booked;
     public String address;
-    public BedType bedType;
+    public Price price;
     public City city;
-    public ArrayList<Date> booked = new ArrayList<>();
+    public BedType bedType;
+    public Facility facility;
+
+    public Room(int id) {
+        super(id);
+    }
+
 }

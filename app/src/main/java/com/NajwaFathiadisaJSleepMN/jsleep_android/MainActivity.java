@@ -6,10 +6,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import model.Room;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,38 +32,46 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        List<Room> roomList = new ArrayList<Room>();
+        Gson gson = new Gson();
+        ListView list = new ListView(this);
+        String data[] = new String[200];
+
+        try {
+            InputStream filepath = getAssets().open("randomRoomList.json");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(filepath));
+
+            Room[] acc = gson.fromJson(reader, Room[].class);
+            Collections.addAll(roomList, acc);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < roomList.size(); i++) {
+            data[i] = roomList.get(i).name;
+        }
+
+        ArrayAdapter<String> array = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        list = (ListView) findViewById(R.id.ListMain);
+        list.setAdapter(array);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        getMenuInflater().inflate(R.menu.topmenu, menu);
+        return true;
     }
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.person_button:
-
-                Intent aboutMeIntent = new Intent(MainActivity.this, AboutMeActivity.class);
-                startActivity(aboutMeIntent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+                Intent intent = new Intent(MainActivity.this, AboutMeActivity.class);
+                startActivity(intent);
+                Toast toast = Toast.makeText(getApplicationContext(), "Account Details", Toast.LENGTH_SHORT);
+                toast.show();
         }
-    }
-    @Override
-    public boolean onCreateOptionsMenu (Menu menu){
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    public String loadJSONFromAsset() {
-        try {
-            InputStream is = MainActivity.this.getAssets().open("randomRoomList.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String json = new String(buffer, "UTF-8");
-            return json;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
+        return true;
     }
 }
