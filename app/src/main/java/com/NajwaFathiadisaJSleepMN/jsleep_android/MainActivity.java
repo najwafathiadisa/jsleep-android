@@ -3,6 +3,7 @@ package com.NajwaFathiadisaJSleepMN.jsleep_android;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.accounts.Account;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,6 +28,8 @@ import java.util.List;
 import model.Room;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static Account cookies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
