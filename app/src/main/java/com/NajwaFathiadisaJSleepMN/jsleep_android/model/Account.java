@@ -1,7 +1,4 @@
-package model;
-
-import model.Renter;
-import model.Serializable;
+package com.NajwaFathiadisaJSleepMN.jsleep_android.model;
 
 public class Account extends Serializable {
     public String name;

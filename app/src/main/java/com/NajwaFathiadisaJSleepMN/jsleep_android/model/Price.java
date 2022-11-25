@@ -1,4 +1,4 @@
-package model;
+package com.NajwaFathiadisaJSleepMN.jsleep_android.model;
 
 public class Price {
     public double discount;

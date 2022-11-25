@@ -1,4 +1,4 @@
-package model;
+package com.NajwaFathiadisaJSleepMN.jsleep_android.model;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
