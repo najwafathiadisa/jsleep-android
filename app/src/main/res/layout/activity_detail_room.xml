@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pinkbg"
+    android:padding="20dp"
+    tools:context=".DetailRoom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="7dp">
+
+        <TextView
+            android:id="@+id/RoomDetailText"
+            android:layout_width="341dp"
+            android:layout_height="65dp"
+            android:fontFamily="@font/bungee_inline"
+            android:text="Room Detail"
+            android:textAlignment="center"
+            android:textColor="#373F70"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/DetailRoomName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/amarante"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textColor="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fillName"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:fontFamily="@font/amarante"
+            android:textColorHint="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/BedTypeText"
+            android:layout_width="99dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:fontFamily="@font/amarante"
+            android:inputType="textEmailAddress"
+            android:text="Bed Type"
+            android:textColor="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fillBedType"
+            android:layout_width="331dp"
+            android:layout_height="34dp"
+            android:fontFamily="@font/amarante"
+            android:textColorHint="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/SizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/amarante"
+            android:inputType="textPersonName"
+            android:text="Size"
+            android:textColor="#322F2F"
+            android:textColorHint="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/SizeFillText"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:textSize="20dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/PriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/amarante"
+            android:inputType="textPersonName"
+            android:text="Price"
+            android:textColor="#322F2F"
+            android:textColorHint="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/PriceFillText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/RoomAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/amarante"
+            android:inputType="textPersonName"
+            android:text="Address"
+            android:textColor="#322F2F"
+            android:textColorHint="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/RoomAddressFillText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/CityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/amarante"
+            android:inputType="textPersonName"
+            android:text="City"
+            android:textColor="#322F2F"
+            android:textColorHint="#322F2F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/CityFillText"
+            android:layout_width="327dp"
+            android:layout_height="36dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkboxDetailac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="AC"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxDetailrefrigerator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="Refrigerator"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxDetailwifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="WiFi"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkboxDetailbathub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="Bathtub"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/cekBalkonDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="Balcony"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/cekRestoDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="Restaurant"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cekswimDeteail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="Swimming Pool"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/cekfitnessDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amarante"
+                android:text="Fitness Center"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

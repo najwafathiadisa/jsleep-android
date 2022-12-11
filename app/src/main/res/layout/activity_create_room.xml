@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/pink"
+    android:background="@color/pinkbg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pinkbg"
+        tools:context=".AboutMeActivity">
+
+        <LinearLayout
+            android:id="@+id/CreateRoomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:id="@+id/create_room"
+                android:layout_width="match_parent"
+                android:layout_height="71dp">
+
+                <TextView
+                    android:id="@+id/createRoomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bungee_inline"
+                    android:gravity="center"
+                    android:text="Create Room"
+                    android:textColor="#3E3A3C"
+                    android:textSize="34sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nameInput_createLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/renterNameAbtMe"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    android:textColor="#322F2F"
+                    android:textColorHint="#888888"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="100dp"
+                    tools:layout_editor_absoluteY="478dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/priceInput_createLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/renterNameInput_layout"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/inputPriceRoom"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Price"
+                    android:inputType="number"
+                    android:textColor="#322F2F"
+                    android:textColorHint="#888888"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="100dp"
+                    tools:layout_editor_absoluteY="555dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addressInput_createLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/addrssRenterAbtMe"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/inputAddress"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Address"
+                    android:inputType="textPersonName"
+                    android:textColor="#322F2F"
+                    android:textColorHint="#888888"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="100dp"
+                    tools:layout_editor_absoluteY="617dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sizeInput_createLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/renterNameInput_layout"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/inputSizeRoom"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Size"
+                    android:inputType="number"
+                    android:textColor="#322F2F"
+                    android:textColorHint="#888888"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="100dp"
+                    tools:layout_editor_absoluteY="555dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/facility_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/CreateRoomLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:id="@+id/create_facility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/facilityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:fontFamily="@font/bungee_inline"
+                    android:gravity="center"
+                    android:text="Facility"
+                    android:textColor="#3E3A3C"
+                    android:textSize="32sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkBoxFacility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/check_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp">
+
+                    <CheckBox
+                        android:id="@+id/cekAC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="AC"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/cekKulkas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="Refrigerator"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/cekWifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="WiFi"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/check_box1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp">
+
+                    <CheckBox
+                        android:id="@+id/cekBathub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="Bathub"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/cekBalkon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="Balcony"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/cekResto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="Restaurant"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/check_box2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp">
+
+                    <CheckBox
+                        android:id="@+id/cekSwim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="Swimming Pool"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/cekFitness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:fontFamily="@font/amarante"
+                        android:text="Fitness Center"
+                        android:textColor="#3E3A3C"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/city_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/facility_city"
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:fontFamily="@font/amarante"
+                    android:text="City"
+                    android:textColor="#3E3A3C"
+                    android:textSize="22sp"
+                    tools:layout_editor_absoluteX="65dp"
+                    tools:layout_editor_absoluteY="160dp" />
+
+                <Spinner
+                    android:id="@+id/Spinner_city"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:gravity="right"
+                    android:text="Fatima"
+                    android:textColor="#9C27B0"
+                    android:textSize="22sp"
+                    tools:layout_editor_absoluteX="300dp"
+                    tools:layout_editor_absoluteY="160dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bedtype_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="18dp">
+
+                <TextView
+                    android:id="@+id/bedtype_facility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:fontFamily="@font/amarante"
+                    android:text="Bed Type"
+                    android:textColor="#3E3A3C"
+                    android:textSize="22sp"
+                    tools:layout_editor_absoluteX="65dp"
+                    tools:layout_editor_absoluteY="210dp" />
+
+                <Spinner
+                    android:id="@+id/Spinner_bed"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:gravity="right"
+                    android:text="fatima@ui.ac.id"
+                    android:textColor="#673AB7"
+                    android:textSize="22sp"
+                    tools:layout_editor_absoluteX="220dp"
+                    tools:layout_editor_absoluteY="210dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_createroom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/facility_layout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <Button
+                android:id="@+id/createButton"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2C3567"
+                android:fontFamily="@font/bungee_inline"
+                android:text="Create" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:backgroundTint="#2C3567"
+                android:fontFamily="@font/bungee_inline"
+                android:text="Cancel" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

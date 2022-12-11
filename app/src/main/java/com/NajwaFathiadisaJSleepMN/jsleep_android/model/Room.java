@@ -1,21 +1,22 @@
 package com.NajwaFathiadisaJSleepMN.jsleep_android.model;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.ArrayList;
+
 
 public class Room extends Serializable {
     public int accountId;
-    public int size;
     public String name;
-    public ArrayList<Date> booked;
-    public String address;
+    public int size;
     public Price price;
-    public City city;
+    public ArrayList<Facility> facility;
+    public String address;
     public BedType bedType;
-    public Facility facility;
+    public City city;
+    public ArrayList<Date> booked = new ArrayList<>();
 
     public Room(int id) {
         super(id);
     }
-
 }
+

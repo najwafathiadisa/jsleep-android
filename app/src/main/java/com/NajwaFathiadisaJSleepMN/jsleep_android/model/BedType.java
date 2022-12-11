@@ -1,5 +1,11 @@
 package com.NajwaFathiadisaJSleepMN.jsleep_android.model;
 
-public enum BedType {
-    SINGLE, QUEEN, KING, DOUBLE
+/**
+ *
+ */
+public enum BedType{
+    DOUBLE,
+    SINGLE,
+    QUEEN,
+    KING
 }

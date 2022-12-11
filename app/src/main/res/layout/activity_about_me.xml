@@ -1,290 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutMeActivity">
+    android:background="@color/pinkbg">
 
-    <TextView
-        android:id="@+id/AboutMeName"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="155dp"
-        android:layout_marginEnd="54dp"
-        android:text="Name"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/Namanya"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".AboutMeActivity">
 
-    <TextView
-        android:id="@+id/Namanya"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="155dp"
-        android:layout_marginEnd="54dp"
-        android:text="Najwa "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AboutMeName"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/AccountDetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="20dp">
 
-    <TextView
-        android:id="@+id/AboutMeEmail"
-        android:layout_width="80dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="24dp"
-        android:text="Email"
-        app:layout_constraintEnd_toStartOf="@+id/Emailnya"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutMeName" />
+            <LinearLayout
+                android:id="@+id/AccountDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
 
-    <TextView
-        android:id="@+id/AboutMeBalance"
-        android:layout_width="80dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="60dp"
-        android:text="Balance"
-        app:layout_constraintEnd_toStartOf="@+id/Balancenya"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutMeEmail" />
+                <TextView
+                    android:id="@+id/AccountDetailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bungee_inline"
+                    android:text="Account Detail"
+                    android:textColor="#43517C"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/Balancenya"
-        android:layout_width="80dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="65dp"
-        android:text="0.0"
-        android:textAlignment="textEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AboutMeBalance"
-        app:layout_constraintTop_toBottomOf="@+id/Emailnya" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Name_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/AccountDetailText"
+                tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/Emailnya"
-        android:layout_width="156dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="35dp"
-        android:text="najwaf262@gmail.com"
-        android:textAlignment="textEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AboutMeEmail"
-        app:layout_constraintTop_toBottomOf="@+id/Namanya" />
+                <TextView
+                    android:id="@+id/nameAboutMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:text="Name"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/AboutMeAmount"
-        android:layout_width="134dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="17dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-light"
-        android:hint="Amount"
-        android:includeFontPadding="true"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/AboutMeTopUp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutMeBalance"
-        tools:ignore="TouchTargetSizeCheck" />
+                <TextView
+                    android:id="@+id/fillName_AboutMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:text="Najwa"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/AboutMeTopUp"
-        android:layout_width="110dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="66dp"
-        android:text="TOP UP"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AboutMeAmount"
-        app:layout_constraintTop_toBottomOf="@+id/Balancenya"
-        tools:ignore="TouchTargetSizeCheck" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Email_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/Name_Layout">
 
-    <TextView
-        android:id="@+id/AboutMeAccountDetails"
-        android:layout_width="159dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="164dp"
-        android:includeFontPadding="true"
-        android:text="Account Details"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/AboutMeName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.181" />
+                <TextView
+                    android:id="@+id/EmailAboutMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:text="Email"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/RegisterRenter"
-        android:layout_width="207dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="292dp"
-        android:text="Register Renter"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutMeAmount"
-        app:layout_constraintVertical_bias="0.0" />
+                <TextView
+                    android:id="@+id/fillEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:text="najwaa@gmail.com"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <EditText
-        android:id="@+id/inputAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="171dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-light"
-        android:hint="Address"
-        android:includeFontPadding="true"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputName"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Balance_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/Email_Layout">
 
-    <EditText
-        android:id="@+id/inputPhone"
-        android:layout_width="216dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="113dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-light"
-        android:hint="Phone Number"
-        android:inputType="phone"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputAddress"
-        app:layout_constraintVertical_bias="0.0" />
+                <TextView
+                    android:id="@+id/Balance_aboutme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:text="Balance"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/inputName"
-        android:layout_width="189dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="228dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-light"
-        android:hint="Name"
-        android:includeFontPadding="true"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterRenter"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
+                <TextView
 
-    <Button
-        android:id="@+id/AboutMeRegisterButton"
-        android:layout_width="110dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="54dp"
-        android:text="REGISTER"
-        android:textSize="13sp"
-        app:iconTint="#670F0F"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/AboutMeCancelButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPhone"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
+                    android:id="@+id/Balance_Input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:gravity="right"
+                    android:text="0.0"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/AboutMeCancelButton"
-        android:layout_width="110dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="54dp"
-        android:text="CANCEL"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AboutMeRegisterButton"
-        app:layout_constraintTop_toBottomOf="@+id/inputPhone"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_topup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/Balance_Layout"
+                tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/IsiAddressRenter"
-        android:layout_width="206dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="176dp"
-        android:gravity="start"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.77"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputName"
-        tools:visibility="invisible" />
+                <EditText
+                    android:id="@+id/Amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:textSize="26sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/PhoneNumDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginBottom="132dp"
-        android:text="Phone Number"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IsiAddressRenter"
-        app:layout_constraintVertical_bias="0.925"
-        tools:visibility="invisible" />
+                <Button
+                    android:id="@+id/topupButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#34436A"
+                    android:fontFamily="@font/bungee_inline"
+                    android:text="Top Up"
+                    android:textColor="@color/pinkbg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/NamaRenterDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="42dp"
-        android:text="Name"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/IsiAddressRenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutMeTopUp"
-        tools:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registRenter_buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/AccountDetailLayout"
+            tools:layout_editor_absoluteX="20dp">
+
+            <Button
+                android:id="@+id/button_registRenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register Renter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registRenter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/AccountDetailLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:id="@+id/renterNameInput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/AccountDetailLayout"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/renterNameAbtMe"
+                    android:layout_width="314dp"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    android:textSize="26sp"
+                    tools:layout_editor_absoluteX="100dp"
+                    tools:layout_editor_absoluteY="480dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RegisterRenterAddressInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/renterNameInput_layout"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/addrssRenterAbtMe"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Address"
+                    android:inputType="textPersonName"
+                    android:textSize="26sp"
+                    tools:layout_editor_absoluteX="100dp"
+                    tools:layout_editor_absoluteY="555dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RegisterRenterPhoneInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/RegisterRenterAddressInputLayout"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/phoneRenterAbtMe"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#57687A"
+                    android:ems="10"
+                    android:fontFamily="@font/amarante"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+                    android:textColor="#EFEFEF"
+                    android:textColorHint="#959595"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="617dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/renterCancelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/phoneNumberInput"
+                tools:layout_editor_absoluteX="0dp">
+
+                <Button
+                    android:id="@+id/registRenterButton"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#34436A"
+                    android:fontFamily="@font/bungee_inline"
+                    android:text="Register"
+                    android:textColor="@color/pinkbg" />
+
+                <Button
+                    android:id="@+id/renterCancelButton"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:backgroundTint="#34436A"
+                    android:fontFamily="@font/bungee_inline"
+                    android:text="Cancel"
+                    android:textColor="@color/pinkbg" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sec_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/AccountDetailLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <LinearLayout
+                android:id="@+id/renter_name_datalayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/regist_renter_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:text="Name"
+                    android:textSize="28sp"
+                    tools:layout_editor_absoluteX="65dp"
+                    tools:layout_editor_absoluteY="160dp" />
+
+                <TextView
+                    android:id="@+id/renter_name_data"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:gravity="right"
+                    android:textSize="28sp"
+                    tools:layout_editor_absoluteX="300dp"
+                    tools:layout_editor_absoluteY="160dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adressData_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/Name_Layout"
+                tools:layout_editor_absoluteX="18dp">
+
+                <TextView
+                    android:id="@+id/regist_renter_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:text="Address"
+                    android:textSize="28sp"
+                    tools:layout_editor_absoluteX="65dp"
+                    tools:layout_editor_absoluteY="210dp" />
+
+                <TextView
+                    android:id="@+id/addressData"
+                    android:layout_width="235dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:gravity="right"
+                    android:textSize="28sp"
+                    tools:layout_editor_absoluteX="220dp"
+                    tools:layout_editor_absoluteY="210dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phoneData_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/Email_Layout"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/regist_renter_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:text="Phone Number"
+                    android:textSize="28sp"
+                    tools:layout_editor_absoluteX="65dp"
+                    tools:layout_editor_absoluteY="269dp" />
+
+                <TextView
+                    android:id="@+id/phoneData"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65dp"
+                    android:gravity="right"
+                    android:textSize="28sp"
+                    tools:layout_editor_absoluteX="350dp"
+                    tools:layout_editor_absoluteY="266dp" />
+
+            </LinearLayout>
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

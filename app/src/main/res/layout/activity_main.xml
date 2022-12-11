@@ -1,79 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/pink">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="409dp"
-        android:layout_height="46dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="63dp">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/ButPrev"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:id="@+id/previousButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:backgroundTint="#005A8D"
+            android:backgroundTint="#33408A"
+            android:fontFamily="@font/amarante"
             android:text="PREV"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textColor="@color/pink"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="53dp" />
 
         <Button
-            android:id="@+id/ButNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:backgroundTint="#005A8D"
+            android:backgroundTint="#33408A"
+            android:fontFamily="@font/amarante"
             android:text="NEXT"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textColor="@color/pink"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="53dp" />
 
         <EditText
-            android:id="@+id/CountText"
-            android:layout_width="63dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:id="@+id/pageCount"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number"
-            android:text="1"
+            android:inputType="numberDecimal"
+            android:text="0"
             android:textAlignment="center"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:layout_editor_absoluteX="230dp"
+            tools:layout_editor_absoluteY="56dp" />
 
         <Button
-            android:id="@+id/ButGo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:id="@+id/goButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:backgroundTint="#005A8D"
+            android:fontFamily="@font/amarante"
             android:text="GO"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:backgroundTint="#33408A"
+            android:textColor="@color/pinkbg"
+            tools:layout_editor_absoluteX="297dp"
+            tools:layout_editor_absoluteY="53dp" />
+
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/ListMain"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="54dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
 
-    </ListView>
+        <ListView
+            android:id="@+id/list_View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    </LinearLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

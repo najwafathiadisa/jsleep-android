@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="150dp"
         android:layout_height="80dp"
-        android:fontFamily="@font/bungee"
+        android:fontFamily="@font/bungee_inline"
         android:text="JSLEEP"
         android:textColor="#005A8D"
         android:textColorHint="#25A9BA"
@@ -27,14 +27,15 @@
         app:layout_constraintVertical_bias="0.201" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/fillEmail_Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/amarante"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        android:textColor="#7E2B2B"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
@@ -44,10 +45,11 @@
         app:layout_constraintVertical_bias="0.389" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/fillPadd_Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/amarante"
         android:hint="password"
         android:inputType="textPassword"
         android:minHeight="48dp"
@@ -60,11 +62,11 @@
         app:layout_constraintVertical_bias="0.478" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#005A8D"
-        android:fontFamily="@font/bungee"
+        android:fontFamily="@font/bungee_inline"
         android:shadowColor="#F5C1CB"
         android:text="Login"
         android:textColor="#FFF5FD"
@@ -81,6 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have account?"
+        android:fontFamily="@font/amarante"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
@@ -90,12 +93,13 @@
         app:layout_constraintVertical_bias="0.655" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/regisNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:minHeight="48dp"
         android:text="Register Now !"
+        android:fontFamily="@font/amarante"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"

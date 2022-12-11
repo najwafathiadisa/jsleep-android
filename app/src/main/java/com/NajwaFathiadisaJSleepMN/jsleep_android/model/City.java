@@ -1,5 +1,13 @@
 package com.NajwaFathiadisaJSleepMN.jsleep_android.model;
 
-public enum City {
-    SURABAYA, DEPOK, LAMPUNG, JAKARTA, BANDUNG, SEMARANG, MEDAN, BEKASI, BALI
+public enum City{
+    BALI,
+    BANDUNG,
+    SURABAYA,
+    JAKARTA,
+    SEMARANG,
+    MEDAN,
+    DEPOK,
+    BEKASI,
+    LAMPUNG
 }
